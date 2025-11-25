@@ -130,17 +130,22 @@ button:focus-visible {
   align-items: center;
 }
 
-/*
 .brand-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
+  justify-content: center;
+  padding: 4px 10px;
   border-radius: 999px;
-  background: #e6e6e6;
+  background: rgba(5, 6, 8, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
-*/
+
+.brand-pill img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
 
 .brand-logo {
   width: 32px;
@@ -963,7 +968,11 @@ button:focus-visible {
 
 @media (max-width: 960px) {
   .hero {
-    padding-top: 105px;
+    padding-top: 110px;
+  }
+
+  .header-inner {
+    height: 64px;
   }
 
   .hero-grid {
@@ -977,12 +986,26 @@ button:focus-visible {
 
   .hero-image-wrap {
     margin: 0 auto;
-    max-width: 480px;
+    max-width: 460px;
   }
 
   .section-heading h1,
   .section-heading h2 {
     font-size: 30px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtext {
+    font-size: 14px;
+  }
+
+  .hero-tag-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
   }
 
   .cards-grid,
@@ -1002,19 +1025,29 @@ button:focus-visible {
 
 @media (max-width: 720px) {
   .header-inner {
-    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+    align-items: center;
+    gap: 12px;
   }
 
+  /* esconde o menu no mobile, deixa só logo + botão */
   .nav {
     display: none;
   }
 
-  .brand-pill {
-    padding: 4px 10px;
+  .btn-glow {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
   }
 
   .hero-title {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .hero-metrics {
@@ -1061,7 +1094,7 @@ button:focus-visible {
 @media (max-width: 480px) {
   .hero {
     padding-top: 96px;
-    padding-bottom: 60px;
+    padding-bottom: 52px;
   }
 
   .section {
@@ -1070,11 +1103,15 @@ button:focus-visible {
 
   .section-heading h1,
   .section-heading h2 {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .hero-subtext {
+    font-size: 13px;
   }
 
   .container {
